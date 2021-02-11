@@ -18,7 +18,7 @@ exports.config = {
 
   // Spec patterns are relative to the current working directory when
   // protractor is called.
-  specs: ['../tests/calculator.js'],
+  specs: ['../tests/sell_listing.js'],
 
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {
@@ -33,7 +33,7 @@ exports.config = {
 
   // Assign the test reporter to each running instance
   onPrepare: function () {
-
+    browser.driver.manage().window().maximize();
     var jasmineReporters = require('jasmine-reporters');
     jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
       consolidateAll: true,
