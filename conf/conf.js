@@ -1,5 +1,7 @@
 // An example configuration file.
+const { dirname } = require('path');
 var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
+const { async } = require('q');
 var reporter = new HtmlScreenshotReporter({
   dest: 'target/screenshots',
   filename: 'my-report.html'
@@ -14,13 +16,10 @@ exports.config = {
   },
 
   // Framework to use. Jasmine is recommended.
+
   framework: 'jasmine',
-
-  // Spec patterns are relative to the current working directory when
-  // protractor is called.
-  specs: ['../tests/calculator.js'],
-
-  // Options to be passed to Jasmine.
+  specs: ['C:/Users/HP/Documents/atif/projects/protractor_demo/protractor/tests/sell_listing.js'],
+    // Options to be passed to Jasmine.
   jasmineNodeOpts: {
     defaultTimeoutInterval: 30000
   },
@@ -33,7 +32,6 @@ exports.config = {
 
   // Assign the test reporter to each running instance
   onPrepare: function () {
-
     var jasmineReporters = require('jasmine-reporters');
     jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
       consolidateAll: true,
@@ -43,7 +41,7 @@ exports.config = {
 
     var fs = require('fs-extra');
  
-fs.emptyDir('screenshots/', function (err) {
+    fs.emptyDir('screenshots/', function (err) {
         console.log(err);
     });
  
@@ -68,6 +66,7 @@ fs.emptyDir('screenshots/', function (err) {
     jasmine.getEnv().addReporter(new AllureReporter({
       resultsDir: 'allure-results'
     }));
+
   },
 
   // Close the report after all tests finish
