@@ -20,7 +20,6 @@ let loginPage = function () {
 
     this.get = function (url) {
         browser.get(url);
-       
         browser.waitForAngularEnabled(false);
 
     };

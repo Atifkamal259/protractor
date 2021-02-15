@@ -1,4 +1,5 @@
 let homepage = require('../pages/homepage');
+
 describe('demo calculator tests', function () {
 
     it('addition test', function () {
@@ -13,8 +14,7 @@ describe('demo calculator tests', function () {
 
         homepage.verifyResult('7');
 
-        browser.sleep(3000);
-
+        browser.sleep(3000)
 
     });
    
