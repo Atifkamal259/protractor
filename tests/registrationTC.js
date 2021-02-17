@@ -1,6 +1,6 @@
 const { Browser } = require('selenium-webdriver');
-let loginPage = require('../pages/login_page.js');
-let Registeration = require('../pages/Registration.js');
+let loginPage = require('../pages/LoginOC.js');
+let Registeration = require('../pages/RegistrationOC.js');
 
 describe('smoke Test', function () {
     it('smoke_test', function () {
