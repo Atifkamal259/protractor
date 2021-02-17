@@ -1,6 +1,9 @@
+const { userPassword } = require("./Registration");
 
 let loginPage = function () {
-
+let UserPassword = element(by.name('userPassword'));
+let UserName = element(by.name('un'));
+let loginBtn = element(by.buttonText('Log In'));
     this.login = function (url, username, password) {
         this.get(url);
         this.enterusername(username);
@@ -10,12 +13,12 @@ let loginPage = function () {
     };
 
     this.enterusername = function (username) {
-        element(by.name('un')).click();
-        element(by.name('un')).clear().sendKeys(username);
+        UserName.click();
+        UserName.clear().sendKeys(username);
     };
     this.enteruserpassword = function (password) {
-        element(by.name('userPassword')).click();
-        element(by.name('userPassword')).clear().sendKeys(password);
+        UserPassword.click();
+        UserPassword.clear().sendKeys(password);
     };
 
     this.get = function (url) {
@@ -25,8 +28,8 @@ let loginPage = function () {
     
 
     this.clickGo = function () {
-        element(by.xpath('/html/body/app-root/app-core/app-login/section/div/div/div/div/div[5]/div/div/button')).click();
-    };
+      loginBtn.click();
+        };
 
     
 };

@@ -1,3 +1,4 @@
+
 let Registeration = function () {
 this.validcheck = function(field, inputdirty, inputclean){
     field.clear().sendKeys(inputdirty);
