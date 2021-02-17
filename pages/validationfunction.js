@@ -10,4 +10,8 @@ this.validcheck = function(field, inputdirty, inputclean){
     expect(field.getAttribute('class')).toMatch('ng-dirty');
     console.log('valid input');
 };
+this.verifyResult = function(result){
+    let output =  element(by.cssContainingText('.ng-binding', result));
+    expect(output.getText()).toEqual(result);
+}
 }
