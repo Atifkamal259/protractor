@@ -6,7 +6,7 @@ let loginPage = function () {
         this.enterusername(username);
         this.enteruserpassword(password);
         this.clickGo();
-        browser.sleep(3000);
+        browser.sleep(1000);
     };
 
     this.enterusername = function (username) {
@@ -20,7 +20,6 @@ let loginPage = function () {
 
     this.get = function (url) {
         browser.get(url);
-        browser.waitForAngularEnabled(false);
 
     };
     

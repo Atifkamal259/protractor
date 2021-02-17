@@ -1,0 +1,63 @@
+const { Browser } = require('selenium-webdriver');
+let loginPage = require('../pages/login_page.js');
+let Registeration = require('../pages/Registration.js');
+
+describe('smoke Test', function () {
+    it('smoke_test', function () {
+        loginPage.get('https://test.chiragh.com/register');
+        browser.sleep(1000);
+        Registeration.enterUserFirstName('atif123@' , 'sdasif');
+        browser.sleep(1000);
+        Registeration.enterUserLastName('kamal123@' , 'kmsdasal');
+        browser.sleep(500);
+        Registeration.enterUserEmail('at!!@gma.com','atif12313@gmail.com');
+        browser.sleep(500);
+        Registeration.userPassword('atif1234!!','Atif1234!!');
+        browser.sleep(500);
+        Registeration.userConfirmPassword('atif1234','Atif1234!!');
+        browser.sleep(500);
+        Registeration.nextbutton();
+        browser.sleep(3000);
+        Registeration.dateofBirth();
+        browser.sleep(1000);
+        Registeration.setDob();
+        browser.sleep(500);
+        Registeration.setnationality();
+        browser.sleep(500);
+        Registeration.setadress('Street#12 Po Box 24186  City:Sharja , Zip code  24186, Country  Emirates');
+        browser.sleep(500);
+        Registeration.setPoBox('abc@1','12312');
+        browser.sleep(500);
+        Registeration.setcountry();
+        browser.sleep(1500);
+        Registeration.setcity();
+        browser.sleep(500);
+        Registeration.setidenTypeNIC();
+        browser.sleep(500);
+        Registeration.setNationalIdNo('acas123123','12312441');
+        browser.sleep(1000);
+        Registeration.setidenTypePP();
+        browser.sleep(500);
+        Registeration.setPassportNo('Aw@31212','Aw1234');
+        browser.sleep(500);
+        Registeration.setPassportExp();
+        browser.sleep(500);
+        Registeration.setmobilecode();
+        browser.sleep(1000);
+        Registeration.setmobileNo('312978909908');
+        browser.sleep(1000);
+        Registeration.setPhonecode();
+        browser.sleep(1000);
+        Registeration.setPhoneNo('3242323234');
+        Registeration.gridcheck();
+        browser.sleep(1000);
+        Registeration.RegisterBtn();
+        browser.sleep(500);
+        Registeration.ProceedBtn();
+        browser.sleep(4000);
+        Registeration.RegisterConfirmation();
+        browser.sleep(3000);
+
+    });
+
+});

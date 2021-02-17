@@ -18,10 +18,11 @@ exports.config = {
   // Framework to use. Jasmine is recommended.
 
   framework: 'jasmine',
-  specs: ['C:/Users/HP/Documents/atif/projects/protractor_demo/protractor/tests/sell_listing.js'],
+  specs: ['C:/Users/HP/Documents/atif/Projects/protractor_demo/protractor/tests/smoketest.js'],
+  
     // Options to be passed to Jasmine.
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
+    defaultTimeoutInterval: 300000
   },
   // Setup the report before any tests start
   beforeLaunch: function () {
@@ -32,6 +33,7 @@ exports.config = {
 
   // Assign the test reporter to each running instance
   onPrepare: function () {
+    browser.driver.manage().window().maximize();
     var jasmineReporters = require('jasmine-reporters');
     jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
       consolidateAll: true,
