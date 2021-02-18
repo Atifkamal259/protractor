@@ -18,7 +18,7 @@ exports.config = {
   // Framework to use. Jasmine is recommended.
 
   framework: 'jasmine',
-  specs: ['C:/Users/HP/Documents/atif/Projects/protractor_demo/protractor/tests/BuyTC.js'],
+  specs: ['C:/Users/HP/Documents/atif/Projects/protractor_demo/protractor/tests/watchListTC.js'],
   
     // Options to be passed to Jasmine.
   jasmineNodeOpts: {

@@ -39,6 +39,7 @@ this.currentInvestmentOp = function() {
     expect(Buy_btn.isPresent()).toBe(true)});
         browser.sleep(4000);
  };
+ 
 
 
 };
