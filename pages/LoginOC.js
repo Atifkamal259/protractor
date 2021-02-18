@@ -1,10 +1,9 @@
-const { userPassword } = require("./Registration");
-
 let loginPage = function () {
 let UserPassword = element(by.name('userPassword'));
 let UserName = element(by.name('un'));
 let loginBtn = element(by.buttonText('Log In'));
     this.login = function (url, username, password) {
+        browser.waitForAngularEnabled(false);
         this.get(url);
         this.enterusername(username);
         this.enteruserpassword(password);
