@@ -1,3 +1,4 @@
+browser.waitForAngularEnabled(false);
 /*************Homepage**************/
 let list =  element(by.xpath('/html/body/app-root/app-core/app-header/header/div/div/nav/div/div/ul/li[4]/a'));
 let EC = protractor.ExpectedConditions;
@@ -9,10 +10,10 @@ let Passport_exp_date =   element(by.css('input[name="passportExpiryDate"]'));
 let container_calander =   element(by.css('.owl-dt-container'));
 let container_calander_btn =   element(by.css('.owl-dt-control-period-button'));
 let year =   element(by.css('[aria-label="2026"]'));
-let month_year =   element(by.css('[aria-label="August 2026"]')).click();
-let month_day_year = element(by.css('[aria-label="August 27; 2026"]'));
+let month_year =   element(by.css('[aria-label="August 2026"]'));
+let month_day_year = element(by.css('[aria-label="August 11, 2026"]'));
 let idCard_no =   element(by.name('idCardNo'));
-let idCard_input =   element(by.css('input[name="idCardNo"]')).clear().sendKeys('34578391');
+let idCard_input =   element(by.css('input[name="idCardNo"]'));
 let idCard_exp_date =   element(by.css('input[name="idCardExpiration"]'));
 let passport_upload =   element(by.xpath('/html/body/app-root/app-core/app-sell/div/div/app-owner/div/app-owner-base-form/form/div[3]/div/div[2]/div[1]/app-upload-file/div/input'));
 let idcard_upload =   element(by.xpath('/html/body/app-root/app-core/app-sell/div/div/app-owner/div/app-owner-base-form/form/div[3]/div/div[2]/div[2]/app-upload-file/div/input'));
@@ -77,8 +78,11 @@ let done_thanks =   element(by.css('.done-thanks'));
 /********Functions for listing******/
 /****------------------------*******/
 let sell_listing= function(){
+    browser.waitForAngularEnabled(false);
     this.list= function(){
-        browser.wait((EC).elementToBeClickable(list), 5000);
+        // browser.waitForAngularEnabled(false);
+        // expect(list.isPresent()).toBe(true);
+        // browser.wait((EC).elementToBeClickable(list), 5000);
         element(by.xpath(list)).click();
     };
     this.sale_Listing=function(){
