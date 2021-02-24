@@ -5,18 +5,18 @@ let WatchList = function () {
     // let EC = protractor.ExpectedConditions;
     let propertyElm1;
     let elm1 = element(by.cssContainingText('.property-info', 'Property ID: 42280'));
-    let elm2 = element(by.cssContainingText('.property-info', 'Property ID: 42280'));
-    let elm3 = element(by.cssContainingText('.upcomming-properties', 'Property ID : 42280')).element(by.css('.upcoming-pro-right'));
+    // let elm2 = element(by.cssContainingText('.property-info', 'Property ID: 42280'));
+    let elm3 = element(by.cssContainingText('.upcomming-properties', 'Property ID: 42280')).element(by.css('.upcoming-pro-right'));
     let elm4 = element(by.cssContainingText('.propertyId', 'Mall of Arabia, 18 Floors'));
     let elm5 = element(by.cssContainingText('.bid-header-outer', 'Property ID: 42280'));
     let markasFavoriteClk = elm1.element(by.css('.markasFavorite'));
-    let markasFavoriteClk0 = elm2.element(by.css('.markasFavorite'));
+    let markasFavoriteClk0 = elm1.element(by.css('.markasFavorite'));
     let dropdownMenuLinkClk = element(by.id('dropdownMenuLink'));
     let dropdownMenuitemClk = element(by.cssContainingText('.dropdown-item', 'Hi'));
     let activityClk = element(by.id('activeTab'));
     let BuyClk = element(by.cssContainingText('.inner-tab', 'Buy'));
     let WatchListClk = element(by.cssContainingText('.w-tabs', 'Watchlist'));
-    this.gettext = async (var1,var2) => {
+      this.gettext = async (var1,var2) => {
         propertyElm1 = var1.get(0);
         let mytext = await propertyElm1.element(by.css(var2)).getText();
         console.log('mytext_outside_function = ' + mytext);

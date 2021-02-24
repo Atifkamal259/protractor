@@ -77,7 +77,12 @@ describe('watch list', function () {
         WatchListOC.verifypropertyD('.upcomming-properties', mytext);
         browser.sleep(6000);
 
-
+        for(var i = 1; i <= 4; i++) {
+            if(i == 1) {
+                // first button
+            }            
+            
+        }
 
 
     });
